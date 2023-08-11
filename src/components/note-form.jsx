@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 
-const NoteForm = () => {
+const NoteForm = ({createNote}) => {
   const [message, setMessage] = useState("");
   return (
     <Form>
@@ -13,7 +13,7 @@ const NoteForm = () => {
           onChange={(e) => setMessage(e.target.value)}
         />
       </Form.Group>
-      <Button variant="warning">Create Note</Button>
+      <Button variant="warning" onClick={()=>createNote(message)}>Create Note</Button>
     </Form>
   );
 };

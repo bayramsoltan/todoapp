@@ -1,16 +1,16 @@
 import React from "react";
-import { Button, Card, Form } from "react-bootstrap";
+import {Card} from "react-bootstrap";
 import {FaTrash, FaEdit} from 'react-icons/fa';
 
-const Note = () => {
+const Note = ({id, message, completed,deleteNote}) => {
   return (
     <Card className="todo-card">
       <Card.Body>
-        <Card.Title>Test</Card.Title>
+        <Card.Title>{message}</Card.Title>
       </Card.Body>
       <Card.Footer className="buttons">
       <span><FaEdit/></span>
-      <span><FaTrash/></span>
+      <span onClick = {()=>deleteNote(id)}><FaTrash/></span>
       </Card.Footer>
     </Card>
   );
