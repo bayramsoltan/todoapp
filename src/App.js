@@ -1,8 +1,9 @@
 import './App.css';
+import TodoApp from './components/todoapp';
 
 const App = () => {
   return (
-    <div>App</div>
+    <div><TodoApp/></div>
   )
 }
 
